@@ -986,6 +986,16 @@
             "rid": "win"
           }
         }
+      },
+      "ProgressSoft.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ProgressSoft.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProgressSoft.Core.dll": {}
+        }
       }
     }
   },
@@ -2740,11 +2750,17 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ProgressSoft.Core/1.0.0": {
+      "type": "project",
+      "path": "../ProgressSoft.Core/ProgressSoft.Core.csproj",
+      "msbuildProject": "../ProgressSoft.Core/ProgressSoft.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
+      "ProgressSoft.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2774,7 +2790,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ahmad\\ProgressSoftTask\\ProgressSoft.Core\\ProgressSoft.Core.csproj": {
+              "projectPath": "C:\\Users\\ahmad\\ProgressSoftTask\\ProgressSoft.Core\\ProgressSoft.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
