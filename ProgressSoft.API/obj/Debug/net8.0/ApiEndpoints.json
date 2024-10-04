@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "ProgressSoft.API.Controllers.CardReadersController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/CardReaders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
