@@ -1,0 +1,16 @@
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\bin\Debug\net8.0\ProgressSoft.EF.deps.json
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\bin\Debug\net8.0\ProgressSoft.EF.dll
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\bin\Debug\net8.0\ProgressSoft.EF.pdb
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\bin\Debug\net8.0\ProgressSoft.Core.dll
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\bin\Debug\net8.0\ProgressSoft.Core.pdb
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.csproj.AssemblyReference.cache
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.AssemblyInfoInputs.cache
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.AssemblyInfo.cs
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.csproj.CoreCompileInputs.cache
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.sourcelink.json
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\Progress.853EECAF.Up2Date
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.dll
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\refint\ProgressSoft.EF.dll
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.pdb
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ref\ProgressSoft.EF.dll
