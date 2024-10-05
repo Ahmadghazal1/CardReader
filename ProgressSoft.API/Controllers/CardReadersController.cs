@@ -24,7 +24,7 @@ namespace ProgressSoft.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllAsync()
         {
-            return Ok(await _unitOfWork.CardReaders.GetAllAsync());
+            return Ok(_mapper.Map<List<CardReaderDto>>(await _unitOfWork.CardReaders.GetAllAsync()));
         }
         [HttpPost]
         public async Task<IActionResult> CreateAsync([FromForm]CreateCardReaderDto createCardReaderDto)
@@ -43,7 +43,7 @@ namespace ProgressSoft.API.Controllers
 
             var model =  await _unitOfWork.CardReaders.CreateAsync(cardReaderModel);
             await _unitOfWork.CompleteAsync();
-            return Ok(model);
+            return Ok(_mapper.Map<CardReaderDto>(model));
         }
     }
 }
