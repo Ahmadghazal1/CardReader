@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "im/Euq/HZaLDYg3kUmY7oXmKe+7p3xeSjn5kOQKvqDBt3iz4K61CkYhRrMpa3LCo3U/pgkbpsDfAZjwE40o2Qw==",
+  "dgSpecHash": "9yR2AHC4zpycI0ZHV0Dz+MLRcXYxfZT3a1txoufQEtM5MeeLTyKWmHnSK0d44QvS8Y60ckRi27NDibGZ9EEZaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmad\\ProgressSoftTask\\ProgressSoft.Core\\ProgressSoft.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\ahmad\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

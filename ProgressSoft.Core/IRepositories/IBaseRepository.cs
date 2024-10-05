@@ -9,5 +9,6 @@ namespace ProgressSoft.Core.IRepositories
     public interface IBaseRepository<T> where T : class
     {
         Task<IEnumerable<T>> GetAllAsync();
+        Task<T> CreateAsync(T entity);
     }
 }

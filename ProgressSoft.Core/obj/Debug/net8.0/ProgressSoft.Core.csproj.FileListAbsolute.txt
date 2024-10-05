@@ -10,3 +10,4 @@ C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\refint\ProgressSoft.Core.dll
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.pdb
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ref\ProgressSoft.Core.dll
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.csproj.AssemblyReference.cache

@@ -14,6 +14,9 @@ namespace ProgressSoft.Core.AutoMapperProfile
         public MapperProfile()
         {
             CreateMap<CardReader, AllCardReadersDto>().ReverseMap();
+            CreateMap<CreateCardReaderDto, CardReader>()
+              // Ignore the Photo field since it's handled manually
+              .ForMember(dest => dest.Photo, opt => opt.Ignore());
         }
     }
 }

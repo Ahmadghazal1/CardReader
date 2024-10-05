@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProgressSoft.Core;
+using ProgressSoft.Core.AutoMapperProfile;
 using ProgressSoft.EF;
 using ProgressSoft.EF.Data;
 
@@ -20,6 +21,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         );
 });
 
+builder.Services.AddAutoMapper(typeof(MapperProfile));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();

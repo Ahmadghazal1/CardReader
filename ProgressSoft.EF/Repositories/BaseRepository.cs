@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProgressSoft.Core.IRepositories;
 using ProgressSoft.EF.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProgressSoft.EF.Repositories
 {
@@ -16,6 +11,13 @@ namespace ProgressSoft.EF.Repositories
         {
             _context = context;
         }
+
+        public async Task<T> CreateAsync(T entity)
+        {
+            await _context.Set<T>().AddAsync(entity);
+            return entity;
+        }
+
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
