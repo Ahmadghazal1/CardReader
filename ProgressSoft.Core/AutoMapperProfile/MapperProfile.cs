@@ -1,0 +1,19 @@
+﻿using AutoMapper;
+using ProgressSoft.Core.Dtos;
+using ProgressSoft.Core.Entites;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProgressSoft.Core.AutoMapperProfile
+{
+    public class MapperProfile : Profile
+    {
+        public MapperProfile()
+        {
+            CreateMap<CardReader, AllCardReadersDto>().ReverseMap();
+        }
+    }
+}
