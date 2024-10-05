@@ -14,12 +14,13 @@ namespace ProgressSoft.EF
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        public IBaseRepository<CardRedaer> CardReaders { get; private set; }
+        public IBaseRepository<CardReader> CardReaders { get; private set; }
         public UnitOfWork(ApplicationDbContext context)
         {
 
             _context = context;
-            CardReaders = new BaseRepository<CardRedaer>(_context);
+            CardReaders = new BaseRepository<CardReader>(_context);
+           
         }
         public async Task CompleteAsync()
         {

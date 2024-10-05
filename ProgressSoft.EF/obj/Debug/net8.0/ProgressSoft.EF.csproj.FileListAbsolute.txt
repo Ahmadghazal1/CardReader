@@ -14,3 +14,5 @@ C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\refint\ProgressSoft.EF.dll
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.pdb
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ref\ProgressSoft.EF.dll
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\bin\Debug\net8.0\ProgressSoft.EF.runtimeconfig.json
+C:\Users\ahmad\ProgressSoftTask\ProgressSoft.EF\obj\Debug\net8.0\ProgressSoft.EF.genruntimeconfig.cache

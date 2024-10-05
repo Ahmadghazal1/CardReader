@@ -4,9 +4,9 @@ using ProgressSoft.Core.Entites;
 
 namespace ProgressSoft.EF.Data.Configuration
 {
-    public class CardReaderConfiguration : IEntityTypeConfiguration<CardRedaer>
+    public class CardReaderConfiguration : IEntityTypeConfiguration<CardReader>
     {
-        public void Configure(EntityTypeBuilder<CardRedaer> builder)
+        public void Configure(EntityTypeBuilder<CardReader> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).IsRequired();

@@ -8,5 +8,15 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProgressSoft.API.Controllers.CardReadersController",
+    "Method": "GetAllStudents",
+    "RelativePath": "api/CardReaders/GetAllStudent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
