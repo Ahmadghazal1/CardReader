@@ -12,15 +12,23 @@ namespace ProgressSoft.EF.Repositories
             _context = context;
         }
 
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<T?> GetByIdAsync(int id)
+        {
+            var model = await _context.Set<T>().FindAsync(id);
+            if (model is null)
+                return null;
+            return model;
+        }
+
         public async Task<T> CreateAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
             return entity;
-        }
-
-        public async Task<IEnumerable<T>> GetAllAsync()
-        {
-            return await _context.Set<T>().ToListAsync();
         }
     }
 }
