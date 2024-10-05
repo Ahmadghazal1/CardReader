@@ -30,5 +30,11 @@ namespace ProgressSoft.EF.Repositories
             await _context.Set<T>().AddAsync(entity);
             return entity;
         }
+
+        public async Task<T?> DeleteAsync(T entity)
+        {
+            _context.Remove(entity);
+            return entity;
+        }
     }
 }

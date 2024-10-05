@@ -45,5 +45,18 @@ namespace ProgressSoft.API.Controllers
             await _unitOfWork.CompleteAsync();
             return Ok(_mapper.Map<CardReaderDto>(model));
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync([FromRoute] int id)
+        {
+            var model = await _unitOfWork.CardReaders.GetByIdAsync(id);
+            if (model is null)
+                return NotFound($"No there Card Reder with this id {id}");
+
+            await _unitOfWork.CardReaders.DeleteAsync(model);
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(_mapper.Map<CardReaderDto>(model)); 
+        }
     }
 }
