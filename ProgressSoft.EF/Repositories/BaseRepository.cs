@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProgressSoft.Core.Helper;
 using ProgressSoft.Core.IRepositories;
 using ProgressSoft.EF.Data;
+using System.Linq.Expressions;
 
 namespace ProgressSoft.EF.Repositories
 {
