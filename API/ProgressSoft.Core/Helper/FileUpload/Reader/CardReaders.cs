@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace ProgressSoft.Core.Helper.FileUpload
+namespace ProgressSoft.Core.Helper.FileUpload.Reader
 {
-    [XmlRoot("CardReaders")] 
+    [XmlRoot("CardReaders")]
     public class CardReaders
     {
-        [XmlElement("CardReader")] 
+        [XmlElement("CardReader")]
         public List<CardReaderFile> Readers { get; set; }
     }
 }

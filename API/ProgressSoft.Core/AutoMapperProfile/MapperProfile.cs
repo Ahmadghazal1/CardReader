@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ProgressSoft.Core.Dtos;
 using ProgressSoft.Core.Entites;
-using ProgressSoft.Core.Helper;
+using ProgressSoft.Core.Helper.FileUpload.Reader;
 using System;
 using System.Collections.Generic;
 using System.Linq;

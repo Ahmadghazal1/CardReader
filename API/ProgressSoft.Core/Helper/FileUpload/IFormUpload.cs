@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using ProgressSoft.Core.Entites;
+using ProgressSoft.Core.Helper.FileUpload.Reader;
 
 namespace ProgressSoft.Core.Helper.FileUpload
 {

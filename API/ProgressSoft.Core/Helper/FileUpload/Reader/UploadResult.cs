@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgressSoft.Core.Helper.FileUpload
+namespace ProgressSoft.Core.Helper.FileUpload.Reader
 {
     public class UploadResult
     {
@@ -13,5 +13,5 @@ namespace ProgressSoft.Core.Helper.FileUpload
         public string ErrorMessage { get; set; }
         public int Length { get; set; }
     }
-    
+
 }

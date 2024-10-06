@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgressSoft.Core.Helper
+namespace ProgressSoft.Core.Helper.FileUpload.Reader
 {
     public class CardReaderFile
     {

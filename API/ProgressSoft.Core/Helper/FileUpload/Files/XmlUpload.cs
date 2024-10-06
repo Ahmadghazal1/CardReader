@@ -1,31 +1,30 @@
-﻿using CsvHelper;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using ProgressSoft.Core.Entites;
+using ProgressSoft.Core.Helper.FileUpload.Reader;
 using System;
 using System.Collections.Generic;
-using System.Formats.Asn1;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
-namespace ProgressSoft.Core.Helper.FileUpload
+namespace ProgressSoft.Core.Helper.FileUpload.Files
 {
-    public class CsvUpload : IFormUpload
+    public class XmlUpload : IFormUpload
     {
         public UploadResult ProcessUpload(IFormFile file)
         {
             try
             {
-                using (var reader = new StreamReader(file.OpenReadStream()))
-                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                using (var stream = file.OpenReadStream())
                 {
-                    var records = csv.GetRecords<CardReaderFile>().ToList();
-                    // Return the records in a successful UploadResult
+                    var serializer = new XmlSerializer(typeof(CardReaders)); // Change to CardReaders
+                    var cardReaders = (CardReaders)serializer.Deserialize(stream);
                     return new UploadResult
                     {
                         Success = true,
-                        Data = records.ToList(),
+                        Data = cardReaders.Readers,
+                        Length = cardReaders.Readers.Count()
                     };
                 }
             }

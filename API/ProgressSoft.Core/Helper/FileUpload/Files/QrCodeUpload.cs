@@ -1,22 +1,23 @@
 ﻿using Microsoft.AspNetCore.Http;
+using ProgressSoft.Core.Helper.FileUpload.Reader;
 using System.Drawing;
 using System.Text.Json;
 using ZXing.Windows.Compatibility;
 
-namespace ProgressSoft.Core.Helper.FileUpload
+namespace ProgressSoft.Core.Helper.FileUpload.Files
 {
     public class QrCodeUpload : IFormUpload
     {
         public UploadResult ProcessUpload(IFormFile file)
         {
             var uploadResult = new UploadResult();
-            uploadResult.Data = new List<CardReaderFile>(); 
+            uploadResult.Data = new List<CardReaderFile>();
 
             try
             {
                 using (var stream = file.OpenReadStream())
                 {
-                    using (var bitmap = new Bitmap(stream)) 
+                    using (var bitmap = new Bitmap(stream))
                     {
                         var reader = new BarcodeReader();
                         var result = reader.Decode(bitmap);
@@ -28,7 +29,7 @@ namespace ProgressSoft.Core.Helper.FileUpload
                             if (cardReaderData != null)
                             {
 
-                                uploadResult.Data.AddRange(cardReaderData); 
+                                uploadResult.Data.AddRange(cardReaderData);
                             }
 
                             uploadResult.Success = true;
@@ -47,7 +48,7 @@ namespace ProgressSoft.Core.Helper.FileUpload
                 uploadResult.ErrorMessage = $"An error occurred: {ex.Message}";
             }
 
-            return uploadResult; 
+            return uploadResult;
         }
     }
 }
