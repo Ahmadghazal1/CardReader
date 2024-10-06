@@ -38,5 +38,11 @@ namespace ProgressSoft.EF.Repositories
             _context.Remove(entity);
             return entity;
         }
+
+        public async Task<List<T>> CreateRaneAsync(List<T> entites)
+        {
+           await _context.Set<T>().AddRangeAsync(entites);
+            return entites;
+        }
     }
 }

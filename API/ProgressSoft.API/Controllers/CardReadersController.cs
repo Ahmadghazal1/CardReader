@@ -6,6 +6,7 @@ using ProgressSoft.Core.Dtos;
 using ProgressSoft.Core.Entites;
 using ProgressSoft.Core.Helper;
 using ProgressSoft.Core.Helper.FileUpload;
+using ProgressSoft.Core.Helper.FileUpload.Files;
 
 namespace ProgressSoft.API.Controllers
 {
@@ -125,7 +126,9 @@ namespace ProgressSoft.API.Controllers
                 }
                 else
                 {
-                    return BadRequest();
+                    var models = await _unitOfWork.CardReaders.CreateRaneAsync(_mapper.Map<List<CardReader>>(result.Data));
+                    await _unitOfWork.CompleteAsync();
+                    return Ok(_mapper.Map<List<CardReaderDto>>(models));
                 }
             }
             else
