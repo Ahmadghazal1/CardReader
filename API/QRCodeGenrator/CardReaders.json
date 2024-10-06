@@ -1,0 +1,93 @@
+[
+  {
+    "Name": "Person 1",
+    "Gender": "Female",
+    "DateOfBirth": "1990-03-25",
+    "Email": "person1@example.com",
+    "Phone": "123-456-7890",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "123 Random Street, City 1, Country"
+  },
+  {
+    "Name": "Person 2",
+    "Gender": "Male",
+    "DateOfBirth": "1985-08-19",
+    "Email": "person2@example.com",
+    "Phone": "123-987-6543",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "456 Random Avenue, City 2, Country"
+  },
+  {
+    "Name": "Person 3",
+    "Gender": "Female",
+    "DateOfBirth": "1975-02-11",
+    "Email": "person3@example.com",
+    "Phone": "123-123-4567",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "789 Random Blvd, City 3, Country"
+  },
+  {
+    "Name": "Person 4",
+    "Gender": "Male",
+    "DateOfBirth": "1995-10-03",
+    "Email": "person4@example.com",
+    "Phone": "123-555-7890",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "321 Random Lane, City 4, Country"
+  },
+  {
+    "Name": "Person 5",
+    "Gender": "Female",
+    "DateOfBirth": "1982-12-25",
+    "Email": "person5@example.com",
+    "Phone": "123-444-3210",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "654 Random Street, City 5, Country"
+  },
+  {
+    "Name": "Person 6",
+    "Gender": "Male",
+    "DateOfBirth": "1978-07-09",
+    "Email": "person6@example.com",
+    "Phone": "123-789-6541",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "987 Random Road, City 6, Country"
+  },
+  {
+    "Name": "Person 7",
+    "Gender": "Female",
+    "DateOfBirth": "1992-05-16",
+    "Email": "person7@example.com",
+    "Phone": "123-654-7893",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "111 Random Circle, City 7, Country"
+  },
+  {
+    "Name": "Person 8",
+    "Gender": "Male",
+    "DateOfBirth": "1980-09-28",
+    "Email": "person8@example.com",
+    "Phone": "123-321-9874",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "222 Random Square, City 8, Country"
+  },
+  {
+    "Name": "Person 9",
+    "Gender": "Female",
+    "DateOfBirth": "1988-04-11",
+    "Email": "person9@example.com",
+    "Phone": "123-777-4563",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "333 Random Terrace, City 9, Country"
+  },
+  {
+    "Name": "Person 10",
+    "Gender": "Male",
+    "DateOfBirth": "1972-01-15",
+    "Email": "person10@example.com",
+    "Phone": "123-999-8887",
+    "Photo": "iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "Address": "444 Random Place, City 10, Country"
+  }
+
+]

@@ -11,3 +11,16 @@ C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\refint\Progre
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.pdb
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ref\ProgressSoft.Core.dll
 C:\Users\ahmad\ProgressSoftTask\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.csproj.AssemblyReference.cache
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.csproj.AssemblyReference.cache
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.AssemblyInfoInputs.cache
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.AssemblyInfo.cs
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.csproj.CoreCompileInputs.cache
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.sourcelink.json
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.dll
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\refint\ProgressSoft.Core.dll
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ProgressSoft.Core.pdb
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\bin\Debug\net8.0\ProgressSoft.Core.deps.json
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\bin\Debug\net8.0\ProgressSoft.Core.dll
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\bin\Debug\net8.0\ProgressSoft.Core.pdb
+C:\Users\ahmad\ProgressSoftTask\API\ProgressSoft.Core\obj\Debug\net8.0\ref\ProgressSoft.Core.dll

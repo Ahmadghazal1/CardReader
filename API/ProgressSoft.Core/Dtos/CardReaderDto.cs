@@ -14,7 +14,7 @@ namespace ProgressSoft.Core.Dtos
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public byte[] Photo { get; set; } // Base64 encoded
+        public string Photo { get; set; } // Base64 encoded
         public string Address { get; set; }
     }
 }

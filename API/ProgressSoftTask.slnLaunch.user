@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "ProgressSoft.API\\ProgressSoft.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "QRCodeGenrator\\QRCodeGenrator.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

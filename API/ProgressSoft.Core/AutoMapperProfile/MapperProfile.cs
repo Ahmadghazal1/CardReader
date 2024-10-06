@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ProgressSoft.Core.Dtos;
 using ProgressSoft.Core.Entites;
+using ProgressSoft.Core.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,10 @@ namespace ProgressSoft.Core.AutoMapperProfile
             CreateMap<CreateCardReaderDto, CardReader>()
               // Ignore the Photo field since it's handled manually
               .ForMember(dest => dest.Photo, opt => opt.Ignore());
+
+            #region Mapping File 
+            CreateMap<CardReaderFile, CardReader>().ReverseMap();
+            #endregion
         }
     }
 }

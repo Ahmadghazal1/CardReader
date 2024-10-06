@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ProgressSoft.Core;
 using ProgressSoft.Core.Constant;
 using ProgressSoft.Core.Dtos;
 using ProgressSoft.Core.Entites;
 using ProgressSoft.Core.Helper;
-using System.Reflection.Metadata.Ecma335;
+using ProgressSoft.Core.Helper.FileUpload;
 
 namespace ProgressSoft.API.Controllers
 {
@@ -51,9 +49,9 @@ namespace ProgressSoft.API.Controllers
                 cardReadersQuery = cardReadersQuery.Where(x => x.Phone.Contains(query.Phone));
             }
 
-            var result = cardReadersQuery.ToList();
+            var result =  cardReadersQuery.ToList();
 
-            return Ok(_mapper.Map<CardReaderDto>(result));
+            return Ok(_mapper.Map<List<CardReaderDto>>(result));
         }
         [HttpPost]
         public async Task<IActionResult> CreateAsync([FromForm]CreateCardReaderDto createCardReaderDto)
@@ -68,7 +66,9 @@ namespace ProgressSoft.API.Controllers
             var photoBytes = stream.ToArray();
 
             var cardReaderModel = _mapper.Map<CardReader>(createCardReaderDto);
-            cardReaderModel.Photo = photoBytes;
+
+            // Convert byte array to Base64 string
+            cardReaderModel.Photo = Convert.ToBase64String(photoBytes); 
 
             var model =  await _unitOfWork.CardReaders.CreateAsync(cardReaderModel);
             await _unitOfWork.CompleteAsync();
@@ -86,6 +86,52 @@ namespace ProgressSoft.API.Controllers
             await _unitOfWork.CompleteAsync();
 
             return Ok(_mapper.Map<CardReaderDto>(model)); 
+        }
+
+        [HttpPost("Upload")]
+        public async Task<IActionResult> UploadFile( IFormFile file)
+        {
+            var fileExtension = Path.GetExtension(file.FileName).ToLower();
+            IFormUpload formUpload;
+
+            if (fileExtension == ".csv")
+            {
+                formUpload = new CsvUpload();
+            }
+             else if (fileExtension == ".xml")
+            {
+                formUpload = new XmlUpload();
+            }
+            else if (fileExtension == ".png") 
+            {
+
+                formUpload = new QrCodeUpload();
+            }
+
+            else
+            {
+                return BadRequest("Unsupported file type. Please upload a CSV or XML file or png(QR CODE).");
+            }
+
+            var result = formUpload.ProcessUpload(file);
+
+            if (result.Success)
+            {
+                if(result.Length == 1)
+                {
+                  var model =  await _unitOfWork.CardReaders.CreateAsync(_mapper.Map<CardReader>(result.Data.FirstOrDefault()));
+                    await _unitOfWork.CompleteAsync();
+                    return Ok(_mapper.Map<CardReaderDto>(model));
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            else
+            {
+                return BadRequest(result.ErrorMessage);
+            }
         }
     }
 }
