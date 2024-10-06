@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AplMzE/Aox9hZ/bZHwojjnMy4Wb0wawylEH69qVdSe8g/EVoR33DM0AQyCny8XLVIAMkuIMkax4nJfOY1j5Elg==",
+  "dgSpecHash": "EN5BVYwly+wKcfdg9LJclmS8mP+jX9f5ECUYwj9V0Dc2Mw7pKV4uvjuddNuGgcCXBZ9VHUEaT+fUgh49XQ3RkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\QRCodeGenrator.csproj",
+  "projectFilePath": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\FileGenrator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmad\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ahmad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

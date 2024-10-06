@@ -713,9 +713,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\QRCodeGenrator.csproj",
-      "projectName": "QRCodeGenrator",
-      "projectPath": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\QRCodeGenrator.csproj",
+      "projectUniqueName": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\FileGenrator.csproj",
+      "projectName": "FileGenrator",
+      "projectPath": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\FileGenrator.csproj",
       "packagesPath": "C:\\Users\\ahmad\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ahmad\\ProgressSoftTask\\API\\QRCodeGenrator\\obj\\",
       "projectStyle": "PackageReference",
