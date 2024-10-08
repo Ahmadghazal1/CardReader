@@ -5,20 +5,24 @@ import { ICardReader } from '../Models/CallReader.model';
 import { ButtonModule } from 'primeng/button';
 import { ThisReceiver } from '@angular/compiler';
 import { ToastModule } from 'primeng/toast';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 @Component({
   selector: 'app-all-cardreaders',
   standalone: true,
-  imports: [TableModule, ButtonModule, ToastModule, CommonModule],
-  providers: [MessageService],
+  imports: [TableModule, ButtonModule, ToastModule, CommonModule, ConfirmDialogModule],
+  providers: [MessageService, ConfirmationService],
   templateUrl: './all-cardreaders.component.html',
   styleUrl: './all-cardreaders.component.css'
 })
 export class AllCardreadersComponent implements OnInit {
   cardReaders: ICardReader[] = [];
-  constructor(private readerService: CardreaderService, private messageService: MessageService, private router: Router) { }
+  constructor(private readerService: CardreaderService,
+    private messageService: MessageService,
+    private router: Router,
+    private confirmationService: ConfirmationService) { }
   ngOnInit(): void {
     this.loadData();
   }
@@ -29,7 +33,7 @@ export class AllCardreadersComponent implements OnInit {
     })
   }
 
-  OnClickDelete(event: any) {
+  deleteCardReader(event: any) {
     this.readerService.deleteCardReader(event).subscribe(response => {
       debugger
       if (response) {
@@ -41,5 +45,21 @@ export class AllCardreadersComponent implements OnInit {
 
   createPage() {
     this.router.navigate(["/create"]);
+  }
+
+  confirm1(id: number) {
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to delete card reader?',
+      header: 'Confirmation',
+      icon: 'pi pi-exclamation-triangle',
+      acceptIcon: "none",
+      rejectIcon: "none",
+      rejectButtonStyleClass: "p-button-text",
+      accept: () => {
+        this.deleteCardReader(id);
+      },
+      reject: () => {
+      }
+    });
   }
 }
