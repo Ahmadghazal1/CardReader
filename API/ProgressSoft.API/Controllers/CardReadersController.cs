@@ -10,7 +10,7 @@ using ProgressSoft.Core.Helper.FileUpload.Files;
 
 namespace ProgressSoft.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CardReadersController : ControllerBase
     {
@@ -59,7 +59,13 @@ namespace ProgressSoft.API.Controllers
         {
             if(createCardReaderDto.Photo.Length > Constant.ONE_MB)
             {
-                return BadRequest("The image size exceeds the maximum allowed size of 1MB.");
+                var problemDetails = new ProblemDetails
+                {
+                    Title = "Image size too large",
+                    Detail = "The image size exceeds the maximum allowed size of 1MB.",
+                    Status = StatusCodes.Status400BadRequest ,
+                };
+                return Ok(problemDetails);
             }
 
             using var stream = new MemoryStream();
@@ -73,7 +79,7 @@ namespace ProgressSoft.API.Controllers
 
             var model =  await _unitOfWork.CardReaders.CreateAsync(cardReaderModel);
             await _unitOfWork.CompleteAsync();
-            return Ok(_mapper.Map<CardReaderDto>(model));
+            return Ok(new { Success = true, Data = model });
         }
 
         [HttpDelete("{id}")]

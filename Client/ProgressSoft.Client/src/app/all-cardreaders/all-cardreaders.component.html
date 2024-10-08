@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2>Cards List</h2>
+    <div class="d-flex justify-content-end mt-3 mb-4">
+        <a class="btn btn-primary" (click)="createPage()">
+            Add new +
+        </a>
+    </div>
+    <p-table [value]="cardReaders" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[5, 10, 20]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:25%">Photo</th>
+                <th style="width:25%">Name</th>
+                <th style="width:25%">Email</th>
+                <th style="width:25%">Phone</th>
+                <th style="width:25%">Gender</th>
+                <th style="width:25%">Date of birth</th>
+                <th></th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cardreader>
+            <tr>
+                <img [src]="'data:image/jpeg;base64,' + cardreader.photo" width="20" style="vertical-align: middle" />
+                <td>{{ cardreader.name }}</td>
+                <td>{{ cardreader.email }}</td>
+                <td>{{ cardreader.phone }}</td>
+                <td>{{ cardreader.gender }}</td>
+                <td>{{ cardreader.dateOfBirth | date: 'dd/MM/yyyy' }}</td>
+                <td><p-button label="Delete" [text]="true" severity="danger" (onClick)="OnClickDelete(cardreader.id)" />
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

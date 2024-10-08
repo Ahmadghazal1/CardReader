@@ -1,0 +1,9 @@
+p-menubar img {
+    margin-right: 20px;
+    /* Add space between logo and menu */
+}
+
+p-menubar .ui-menubar-root-list {
+    align-items: center;
+    /* Align menu items vertically with the logo */
+}

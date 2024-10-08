@@ -1,0 +1,87 @@
+<p-toast></p-toast>
+<div class="container mt-5">
+    <div class="card-reader-form-container">
+        <h2 class="text-center mb-4">Add Card Reader</h2>
+        <form [formGroup]="cardReaderForm" (ngSubmit)="onSubmit()">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" type="text" class="form-control" formControlName="name"
+                        placeholder="Enter your name" />
+                    <div *ngIf="cardReaderForm.get('name')?.invalid && cardReaderForm.get('name')?.touched"
+                        class="text-danger mt-1">
+                        Name is required.
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <p-dropdown [options]="[{label:'Male', value:'Male'}, {label:'Female', value:'Female'}]"
+                        formControlName="gender" placeholder="Select Gender" [style]="{'width':'100%'}">
+                    </p-dropdown>
+                    <div *ngIf="cardReaderForm.get('gender')?.invalid && cardReaderForm.get('gender')?.touched"
+                        class="text-danger mt-1">
+                        Gender is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6 mb-3">
+                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                    <p-calendar id="dateOfBirth" formControlName="dateOfBirth" showIcon="true"
+                        [style]="{'width':'100%'}"></p-calendar>
+                    <div *ngIf="cardReaderForm.get('dateOfBirth')?.invalid && cardReaderForm.get('dateOfBirth')?.touched"
+                        class="text-danger mt-1">
+                        Date of Birth is required.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" type="email" class="form-control" formControlName="email"
+                        placeholder="Enter your email" />
+                    <div *ngIf="cardReaderForm.get('email')?.invalid && cardReaderForm.get('email')?.touched"
+                        class="text-danger mt-1">
+                        A valid email is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input id="phone" type="text" class="form-control" formControlName="phone"
+                        placeholder="Enter your phone number" />
+                    <div *ngIf="cardReaderForm.get('phone')?.invalid && cardReaderForm.get('phone')?.touched"
+                        class="text-danger mt-1">
+                        Phone is required.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="address" class="form-label">Address</label>
+                    <input id="address" type="text" class="form-control" formControlName="address"
+                        placeholder="Enter your address" />
+                    <div *ngIf="cardReaderForm.get('address')?.invalid && cardReaderForm.get('address')?.touched"
+                        class="text-danger mt-1">
+                        Address is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label for="photo" class="form-label">Upload Photo</label>
+                    <input id="photo" type="file" class="form-control" formControlName="photo"
+                        (change)="onFileSelected($event)" />
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-primary" [disabled]="cardReaderForm.invalid">Submit</button>
+                <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

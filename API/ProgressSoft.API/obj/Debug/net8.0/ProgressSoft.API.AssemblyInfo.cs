@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProgressSoft.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb3c2fa2fde2e8004c6d8313c0f4baf109fea098")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17cb20ef6bc69aeb77c2f6359a4114413212acb6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProgressSoft.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProgressSoft.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

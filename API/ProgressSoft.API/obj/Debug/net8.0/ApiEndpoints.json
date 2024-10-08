@@ -2,7 +2,7 @@
   {
     "ContainingType": "ProgressSoft.API.Controllers.CardReadersController",
     "Method": "GetAllAsync",
-    "RelativePath": "api/CardReaders",
+    "RelativePath": "CardReaders",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -33,7 +33,7 @@
   {
     "ContainingType": "ProgressSoft.API.Controllers.CardReadersController",
     "Method": "CreateAsync",
-    "RelativePath": "api/CardReaders",
+    "RelativePath": "CardReaders",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -79,7 +79,7 @@
   {
     "ContainingType": "ProgressSoft.API.Controllers.CardReadersController",
     "Method": "DeleteAsync",
-    "RelativePath": "api/CardReaders/{id}",
+    "RelativePath": "CardReaders/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -95,7 +95,7 @@
   {
     "ContainingType": "ProgressSoft.API.Controllers.CardReadersController",
     "Method": "UploadFile",
-    "RelativePath": "api/CardReaders/Upload",
+    "RelativePath": "CardReaders/Upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
