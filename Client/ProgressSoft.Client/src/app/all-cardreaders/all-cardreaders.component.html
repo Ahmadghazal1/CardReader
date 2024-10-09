@@ -1,6 +1,4 @@
 <div class="container mt-5">
-    <p-toast></p-toast>
-    <p-confirmDialog />
     <h2>Cards List</h2>
     <div class="d-flex justify-content-end mt-3 mb-4">
 
@@ -31,7 +29,8 @@
                     <td>{{ cardreader.phone }}</td>
                     <td>{{ cardreader.gender }}</td>
                     <td>{{ cardreader.dateOfBirth | date: 'dd/MM/yyyy' }}</td>
-                    <td><p-button label="Delete" [text]="true" severity="danger" (onClick)="confirm1(cardreader.id)" />
+                    <td><p-button label="Delete" [text]="true" severity="danger"
+                            (onClick)="deleteCardReader(cardreader.id)" />
                     </td>
                 </tr>
             </ng-template>

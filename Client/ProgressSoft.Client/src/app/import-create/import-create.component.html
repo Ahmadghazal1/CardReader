@@ -6,8 +6,8 @@
             <input type="file" class="form-control" (change)="handleFile($event)" />
         </div>
     </div>
-    <div *ngIf="csvData.length > 0" class="row mt-4">
-        <div *ngFor="let card of csvData" class="card col-lg-3" style="width: 18rem; margin-bottom: 20px;">
+    <div *ngIf="Data.length > 0" class="row mt-4">
+        <div *ngFor="let card of Data" class="card col-lg-3" style="width: 18rem; margin-bottom: 20px;">
             <img class="card-img-top" [src]="'data:image/jpeg;base64,' + card.Photo" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{ card.Name }}</h5>
@@ -19,5 +19,5 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary mt-2" *ngIf="csvData.length > 0" (click)="onSubmit()">Save</button>
+    <button class="btn btn-primary mt-2" *ngIf="Data.length > 0" (click)="onSubmit()">Save</button>
 </div>

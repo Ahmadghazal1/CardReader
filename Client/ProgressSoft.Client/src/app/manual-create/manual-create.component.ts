@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { FileUploadModule } from 'primeng/fileupload';
 import { DataViewModule } from 'primeng/dataview';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-manual-create',
   standalone: true,
@@ -30,7 +31,7 @@ import { DataViewModule } from 'primeng/dataview';
 export class ManualCreateComponent {
   cardReaderForm: FormGroup;
   imageSrc: string = '';
-  constructor(private fb: FormBuilder, private cardreaderService: CardreaderService, private router: Router, private messageService: MessageService) {
+  constructor(private fb: FormBuilder, private cardreaderService: CardreaderService, private router: Router, private toasterService: ToastrService) {
     this.cardReaderForm = this.fb.group({
       name: ['', Validators.required],
       gender: ['', Validators.required],
@@ -62,7 +63,7 @@ export class ManualCreateComponent {
       this.cardreaderService.CreateCardReader(formData).subscribe((response) => {
         debugger
         if (response.success) {
-          this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Card reader created successfuly' });
+          this.toasterService.success("Card Reader Created Successfuly");
           this.resetForm();
         }
         else {
