@@ -4,8 +4,7 @@
     <h2>Cards List</h2>
     <div class="d-flex justify-content-end mt-3 mb-4">
 
-
-        <p-button label="Add new" icon="pi pi-check" iconPos="left" (click)="createPage()"></p-button>
+        <button class="btn btn-primary" (click)="createPage()">New Card Reader</button>
     </div>
     <div class="card">
         <p-table [value]="cardReaders" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"

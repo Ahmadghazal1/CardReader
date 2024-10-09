@@ -16,9 +16,13 @@
 
                 <div class="col-md-6 mb-3">
                     <label for="gender" class="form-label">Gender</label>
-                    <p-dropdown [options]="[{label:'Male', value:'Male'}, {label:'Female', value:'Female'}]"
-                        formControlName="gender" placeholder="Select Gender" [style]="{'width':'100%'}">
-                    </p-dropdown>
+                    <select formControlName="gender" class="form-select" id="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option *ngFor="let option of [{label:'Male', value:'Male'}, {label:'Female', value:'Female'}]"
+                            [value]="option.value">
+                            {{ option.label }}
+                        </option>
+                    </select>
                     <div *ngIf="cardReaderForm.get('gender')?.invalid && cardReaderForm.get('gender')?.touched"
                         class="text-danger mt-1">
                         Gender is required.

@@ -4,8 +4,9 @@
     <div class="container text-center mt-4">
         <h1>You Can Create Card Readers Manually or Using CSV File or XML File.</h1>
         <div class="d-inline-block mt-3">
-            <p-button label="Manuall" [raised]="true" class="me-2" (onClick)="ManualPage()" />
-            <p-button label="Import" iconn="pi-cloud-download" [raised]="true" severity="secondary" />
+            <button class="btn btn-primary me-2" (click)="ManualPage()">Manual</button>
+            <button class="btn btn-secondary" (click)="importPage()">Import File</button>
+
         </div>
     </div>
 </div>

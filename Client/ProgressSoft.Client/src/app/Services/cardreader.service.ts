@@ -22,7 +22,10 @@ export class CardreaderService {
   }
 
   CreateCardReader(formData: FormData): Observable<any> {
-    debugger
     return this.http.post<any>(this.baseUrl + this.controller, formData)
+  }
+
+  ImportCardReader(cardReader: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl + this.controller + '/Upload', cardReader)
   }
 }

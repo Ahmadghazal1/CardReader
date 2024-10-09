@@ -9,7 +9,8 @@ import { ToastModule } from 'primeng/toast';
 import { CardreaderService } from '../Services/cardreader.service';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
-
+import { FileUploadModule } from 'primeng/fileupload';
+import { DataViewModule } from 'primeng/dataview';
 @Component({
   selector: 'app-manual-create',
   standalone: true,
@@ -19,6 +20,8 @@ import { MessageService } from 'primeng/api';
     DropdownModule,
     CalendarModule,
     ButtonModule,
+    FileUploadModule,
+    DataViewModule,
     ToastModule],
   providers: [MessageService],
   templateUrl: './manual-create.component.html',
@@ -57,6 +60,7 @@ export class ManualCreateComponent {
       }
 
       this.cardreaderService.CreateCardReader(formData).subscribe((response) => {
+        debugger
         if (response.success) {
           this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Card reader created successfuly' });
           this.resetForm();

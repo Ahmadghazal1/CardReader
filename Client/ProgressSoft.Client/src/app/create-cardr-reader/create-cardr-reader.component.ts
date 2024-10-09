@@ -18,6 +18,10 @@ export class CreateCardrReaderComponent {
   constructor(private router: Router) { }
 
   ManualPage() {
+    debugger
     this.router.navigate(["/manual-create"])
+  }
+  importPage() {
+    this.router.navigate(["/import-create"])
   }
 }

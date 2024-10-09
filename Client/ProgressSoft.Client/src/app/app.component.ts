@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AllCardreadersComponent } from "./all-cardreaders/all-cardreaders.component";
 import { HeaderComponent } from "./header/header.component";
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,4 +11,5 @@ import { HeaderComponent } from "./header/header.component";
 })
 export class AppComponent {
   title = 'ProgressSoft.Client';
+
 }

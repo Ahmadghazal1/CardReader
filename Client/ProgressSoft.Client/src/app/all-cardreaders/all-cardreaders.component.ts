@@ -47,6 +47,8 @@ export class AllCardreadersComponent implements OnInit {
     this.router.navigate(["/create"]);
   }
 
+
+
   confirm1(id: number) {
     this.confirmationService.confirm({
       message: 'Are you sure that you want to delete card reader?',

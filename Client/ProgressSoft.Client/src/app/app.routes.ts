@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AllCardreadersComponent } from './all-cardreaders/all-cardreaders.component';
 import { CreateCardrReaderComponent } from './create-cardr-reader/create-cardr-reader.component';
 import { ManualCreateComponent } from './manual-create/manual-create.component';
+import { ImportCreateComponent } from './import-create/import-create.component';
 
 export const routes: Routes = [
 
@@ -16,5 +17,10 @@ export const routes: Routes = [
     {
         path: 'manual-create',
         component: ManualCreateComponent
+    },
+    {
+        path: 'import-create',
+        component: ImportCreateComponent
     }
+
 ];

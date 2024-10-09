@@ -8,3 +8,14 @@ export interface ICardReader {
     photo: string;
     gender: string;
 }
+
+
+export interface ImportCardReader {
+    Name: string;
+    Address: string;
+    Phone: string;
+    DateOfBirth: string;
+    Email: string;
+    Photo: string;
+    Gender: string;
+}
