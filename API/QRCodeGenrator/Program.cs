@@ -65,7 +65,7 @@ static void GenerateCsvFile()
     using (var writer = new StreamWriter(filePath))
     {
         // Write header
-        writer.WriteLine("Name,Gender,DateOfBirth,Email,Phone,Address,Photo");
+        writer.WriteLine("name,gender,dateOfBirth,email,phone,address,photo");
 
         // Write data
         foreach (var cardReader in cardReaders)

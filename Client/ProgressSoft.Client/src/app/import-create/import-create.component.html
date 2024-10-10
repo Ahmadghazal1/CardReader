@@ -9,14 +9,14 @@
         </div>
         <div *ngIf="Data.length > 0" class="row mt-4">
             <div *ngFor="let card of Data" class="card col-lg-3" style="width: 18rem; margin-bottom: 20px;">
-                <img class="card-img-top" [src]="'data:image/jpeg;base64,' + card.Photo" alt="Card image cap">
+                <img class="card-img-top" [src]="'data:image/jpeg;base64,' + card.photo" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">{{ card.Name }}</h5>
-                    <p class="card-text">Address: {{ card.Address }}</p>
-                    <p class="card-text">Phone: {{ card.Phone }}</p>
-                    <p class="card-text">Email: {{ card.Email }}</p>
-                    <p class="card-text">Date of Birth: {{ card.DateOfBirth }}</p>
-                    <p class="card-text">Gender: {{ card.Gender }}</p>
+                    <h5 class="card-title">{{ card.name }}</h5>
+                    <p class="card-text">Address: {{ card.address }}</p>
+                    <p class="card-text">Phone: {{ card.phone }}</p>
+                    <p class="card-text">Email: {{ card.email }}</p>
+                    <p class="card-text">Date of Birth: {{ card.dateOfBirth }}</p>
+                    <p class="card-text">Gender: {{ card.gender }}</p>
                 </div>
             </div>
         </div>

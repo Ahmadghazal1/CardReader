@@ -11,13 +11,13 @@ export interface ICardReader {
 
 
 export interface ImportCardReader {
-    Name: string;
-    Address: string;
-    Phone: string;
-    DateOfBirth: string;
-    Email: string;
-    Photo: string;
-    Gender: string;
+    name: string;
+    address: string;
+    phone: string;
+    dateOfBirth: string;
+    email: string;
+    photo: string;
+    gender: string;
 }
 
 export interface ExportCardReader {

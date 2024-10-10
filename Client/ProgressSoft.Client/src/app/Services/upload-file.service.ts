@@ -78,23 +78,23 @@ export class UploadFileService {
     for (let i = 0; i < cardReaders.length; i++) {
       const cardReader = cardReaders[i];
 
-      const Name = cardReader.getElementsByTagName('Name')[0]?.textContent?.trim() || '';
-      const Gender = cardReader.getElementsByTagName('Gender')[0]?.textContent?.trim() || '';
-      const DateOfBirth = cardReader.getElementsByTagName('DateOfBirth')[0]?.textContent?.trim() || '';
-      const Email = cardReader.getElementsByTagName('Email')[0]?.textContent?.trim() || '';
-      const Phone = cardReader.getElementsByTagName('Phone')[0]?.textContent?.trim() || '';
-      const Photo = cardReader.getElementsByTagName('Photo')[0]?.textContent?.trim() || '';
-      const Address = cardReader.getElementsByTagName('Address')[0]?.textContent?.trim() || '';
+      const name = cardReader.getElementsByTagName('name')[0]?.textContent?.trim() || '';
+      const gender = cardReader.getElementsByTagName('gender')[0]?.textContent?.trim() || '';
+      const dateOfBirth = cardReader.getElementsByTagName('dateOfBirth')[0]?.textContent?.trim() || '';
+      const email = cardReader.getElementsByTagName('email')[0]?.textContent?.trim() || '';
+      const phone = cardReader.getElementsByTagName('phone')[0]?.textContent?.trim() || '';
+      const photo = cardReader.getElementsByTagName('photo')[0]?.textContent?.trim() || '';
+      const address = cardReader.getElementsByTagName('address')[0]?.textContent?.trim() || '';
 
       // Push the parsed data into the cardReaderList array
       cardReaderList.push({
-        Name,
-        Gender,
-        DateOfBirth,
-        Email,
-        Phone,
-        Photo,
-        Address
+        name,
+        gender,
+        dateOfBirth,
+        email,
+        phone,
+        photo,
+        address
       });
     }
 
