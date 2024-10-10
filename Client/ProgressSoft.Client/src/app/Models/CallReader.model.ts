@@ -19,3 +19,13 @@ export interface ImportCardReader {
     Photo: string;
     Gender: string;
 }
+
+export interface ReviewCardReader {
+    name: string;
+    address: string;
+    phone: string;
+    dateOfBirth: string;
+    email: string;
+    photo: string;
+    gender: string;
+}

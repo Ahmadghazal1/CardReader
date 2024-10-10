@@ -12,6 +12,7 @@ import { MessageService } from 'primeng/api';
 import { FileUploadModule } from 'primeng/fileupload';
 import { DataViewModule } from 'primeng/dataview';
 import { ToastrService } from 'ngx-toastr';
+import { ReviewCardReader } from '../Models/CallReader.model';
 @Component({
   selector: 'app-manual-create',
   standalone: true,
@@ -39,10 +40,9 @@ export class ManualCreateComponent {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
       address: ['', Validators.required],
-      photo: [null]
     });
   }
-
+  file: any;
 
   onSubmit() {
     if (this.cardReaderForm.valid) {
@@ -55,16 +55,17 @@ export class ManualCreateComponent {
       formData.append('phone', this.cardReaderForm.get('phone')?.value);
       formData.append('address', this.cardReaderForm.get('address')?.value);
 
-      const photoFile = this.cardReaderForm.get('photo')?.value;
-      if (photoFile instanceof File) {
-        formData.append('photo', photoFile);
+      if (this.file) {
+        formData.append('photo', this.file)
       }
 
       this.cardreaderService.CreateCardReader(formData).subscribe((response) => {
-        debugger
+
         if (response.success) {
           this.toasterService.success("Card Reader Created Successfuly");
           this.resetForm();
+          this.routing();
+
         }
         else {
           console.log(response.title);
@@ -77,19 +78,30 @@ export class ManualCreateComponent {
 
 
   onFileSelected(event: any): void {
-    const file = event.target.files[0];
-    if (file) {
-      this.cardReaderForm.patchValue({
-        photo: file
-      });
+    this.file = event.target.files[0] as HTMLElement;
+    if (this.file) {
+
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.imageSrc = e.target.result;
+      };
+
+      reader.readAsDataURL(this.file);
     }
+
+
   }
 
   resetForm() {
     this.cardReaderForm.reset();
   }
 
-  onCancel() {
+  routing() {
     this.router.navigate(['/']);
+  }
+
+  DataReview!: ReviewCardReader;
+  previw() {
+    this.DataReview = this.cardReaderForm.value;
   }
 }

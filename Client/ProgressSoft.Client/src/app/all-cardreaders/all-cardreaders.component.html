@@ -30,7 +30,7 @@
                     <td>{{ cardreader.gender }}</td>
                     <td>{{ cardreader.dateOfBirth | date: 'dd/MM/yyyy' }}</td>
                     <td>
-                        <button class="btn btn-danger" (onClick)="deleteCardReader(cardreader.id)">
+                        <button class="btn btn-danger" (click)="deleteCardReader(cardreader.id)">
                             <span><i class="bi bi-trash3"></i></span>
                         </button>
 
