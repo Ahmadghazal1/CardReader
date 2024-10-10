@@ -20,6 +20,16 @@ export interface ImportCardReader {
     Gender: string;
 }
 
+export interface ExportCardReader {
+    Name: string;
+    Address: string;
+    Phone: string;
+    DateOfBirth: string;
+    Email: string;
+    Photo: string;
+    Gender: string;
+}
+
 export interface ReviewCardReader {
     name: string;
     address: string;

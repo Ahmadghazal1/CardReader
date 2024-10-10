@@ -45,5 +45,36 @@ export class AllCardreadersComponent implements OnInit {
   }
 
 
+  exportToXML(cardReader: ICardReader) {
+
+  }
+
+
+  exportToCSV(cardReader: ICardReader) {
+    const csvRows: string[] = [];
+
+
+    const headers = Object.keys(cardReader) as Array<keyof ICardReader>;;
+    csvRows.push(headers.join(','));
+
+
+    const values = headers.map(header => {
+      const escaped = ('' + cardReader[header]).replace(/"/g, '""');
+      return `"${escaped}"`;
+    });
+    csvRows.push(values.join(','));
+
+
+    const blob = new Blob([csvRows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'card_reader.csv');
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
 }

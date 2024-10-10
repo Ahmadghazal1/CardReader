@@ -33,13 +33,13 @@
             <div class="row mb-3">
                 <div class="col-md-6 mb-3">
                     <label for="dateOfBirth" class="form-label">Date of Birth</label>
-                    <p-calendar id="dateOfBirth" formControlName="dateOfBirth" showIcon="true"
-                        [style]="{'width':'100%'}"></p-calendar>
+                    <input type="date" id="dateOfBirth" class="form-control" formControlName="dateOfBirth" />
                     <div *ngIf="cardReaderForm.get('dateOfBirth')?.invalid && cardReaderForm.get('dateOfBirth')?.touched"
                         class="text-danger mt-1">
                         Date of Birth is required.
                     </div>
                 </div>
+
 
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>
