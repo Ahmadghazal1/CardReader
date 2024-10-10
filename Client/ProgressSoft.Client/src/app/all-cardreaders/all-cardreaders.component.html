@@ -5,9 +5,8 @@
         <button class="btn btn-primary" (click)="createPage()"><i class="bi bi-plus-lg"></i> New Card Reader</button>
     </div>
     <div class="card">
-        <p-table [value]="cardReaders" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
-            [rowsPerPageOptions]="[5, 10, 20]">
-            <ng-template pTemplate="header">
+        <table class="table table-borderd">
+            <thead>
                 <tr>
                     <th style="width:25%">Photo</th>
                     <th style="width:25%">Name</th>
@@ -17,9 +16,9 @@
                     <th style="width:25%">Date Birth</th>
                     <th></th>
                 </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-cardreader>
-                <tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cardreader of cardReaders">
                     <td>
                         <img [src]="'data:image/jpeg;base64,' + cardreader.photo" width="50" class="shadow-4" />
                     </td>
@@ -36,8 +35,9 @@
 
                     </td>
                 </tr>
-            </ng-template>
-        </p-table>
+            </tbody>
+        </table>
+        
     </div>
 
 </div>

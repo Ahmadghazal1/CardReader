@@ -25,7 +25,7 @@ export class ImportCreateComponent implements OnInit {
   uploadFile?: File;
   QrCodeData: string = '';
   handleFile(event: Event) {
-
+    debugger
 
     const target = event.target as HTMLInputElement;
     const files = target.files;
@@ -43,7 +43,9 @@ export class ImportCreateComponent implements OnInit {
           });
           break;
         case 'xml':
-          ;
+          this.fileUploadService.convertXMLToString(file).then((xmlData: string) => {
+            this.Data = this.fileUploadService.parseXML(xmlData); // Ensure parsing happens after file is read
+          });
           break;
         case 'png':
           this.fileUploadService.readQrCode(file)
@@ -55,13 +57,10 @@ export class ImportCreateComponent implements OnInit {
           this.toastr.error("Unsported File");
           break;
       }
-
       this.uploadFile = file;
-
     }
 
   }
-
 
   onSubmit() {
     const formData = new FormData();
@@ -74,6 +73,8 @@ export class ImportCreateComponent implements OnInit {
       this.router.navigate(["/"]);
     })
   }
+
+
 
 
 }
