@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "jsqr": "^1.4.0",
     "ngx-csv-parser": "^2.0.0",
     "ngx-toastr": "^19.0.0",

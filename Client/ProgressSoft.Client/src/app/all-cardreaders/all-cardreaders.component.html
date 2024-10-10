@@ -2,7 +2,7 @@
     <h2>Cards List</h2>
     <div class="d-flex justify-content-end mt-3 mb-4">
 
-        <button class="btn btn-primary" (click)="createPage()">New Card Reader</button>
+        <button class="btn btn-primary" (click)="createPage()"><i class="bi bi-plus-lg"></i> New Card Reader</button>
     </div>
     <div class="card">
         <p-table [value]="cardReaders" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
@@ -29,8 +29,11 @@
                     <td>{{ cardreader.phone }}</td>
                     <td>{{ cardreader.gender }}</td>
                     <td>{{ cardreader.dateOfBirth | date: 'dd/MM/yyyy' }}</td>
-                    <td><p-button label="Delete" [text]="true" severity="danger"
-                            (onClick)="deleteCardReader(cardreader.id)" />
+                    <td>
+                        <button class="btn btn-danger" (onClick)="deleteCardReader(cardreader.id)">
+                            <span><i class="bi bi-trash3"></i></span>
+                        </button>
+
                     </td>
                 </tr>
             </ng-template>
