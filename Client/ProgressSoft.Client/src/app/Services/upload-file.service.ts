@@ -43,7 +43,6 @@ export class UploadFileService {
 
       };
 
-      // Read the file as a data URL
       reader.readAsDataURL(file);
     });
   }
@@ -86,7 +85,6 @@ export class UploadFileService {
       const photo = cardReader.getElementsByTagName('photo')[0]?.textContent?.trim() || '';
       const address = cardReader.getElementsByTagName('address')[0]?.textContent?.trim() || '';
 
-      // Push the parsed data into the cardReaderList array
       cardReaderList.push({
         name,
         gender,
@@ -98,7 +96,6 @@ export class UploadFileService {
       });
     }
 
-    // Return the list of ImportCardReader objects
     return cardReaderList;
   }
 
@@ -109,14 +106,14 @@ export class UploadFileService {
 
       reader.onload = (e) => {
         const xmlString = reader.result as string;
-        resolve(xmlString); // Resolve the promise with the result
+        resolve(xmlString);
       };
 
       reader.onerror = (e) => {
         reject('Error reading file');
       };
 
-      reader.readAsText(file); // Read the file as text
+      reader.readAsText(file);
     });
   }
 
