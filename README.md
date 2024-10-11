@@ -24,17 +24,17 @@ The Business Card Management System allows users to create, view, and manage bus
 
 ### Business Cards
 
-- **POST** `/api/businesscards`  
-  Create a new business card. Accepts JSON input or file uploads (XML/CSV).
+- **POST** `/CardReaders`  
+  Create a new business card. Accepts JSON input .
+  
+- **POST** `/CardReaders/Upload`  
+  Create a new business card. Accepts file uploads (XML/CSV) OR QR Code.
 
-- **GET** `/api/businesscards`  
+- **GET** `/CardReaders`  
   Retrieve all business cards. Supports optional filtering.
 
-- **DELETE** `/api/businesscards/{id}`  
+- **DELETE** `/CardReaders/{id}`  
   Delete a business card by ID.
-
-- **GET** `/api/businesscards/export`  
-  Export all business cards to CSV or XML format.
 
 ## Frontend Functionality
 
@@ -55,17 +55,23 @@ The Business Card Management System allows users to create, view, and manage bus
 1. Clone the repository to your local machine:
    ```bash
     git clone https://github.com/Ahmadghazal1/CardReader.git
+   
 2.Navigate to the backend project folder:
     `cd API`
+    
 3. Restore NuGet packages:
    `dotnet restore`
+   
 4.Run the migrations to set up the database: 
   `dotnet ef database update
 `
+
 5.Navigate to the frontend project folder:
 `cd Client`
+
 6.Install the required npm packages:
 `npm install
 `
+
 7.tart the Angular application:
 `ng serve`
