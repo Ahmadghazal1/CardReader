@@ -8,12 +8,12 @@ namespace ProgressSoft.Core.Helper.FileUpload.Reader
 {
     public class CardReaderFile
     {
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Photo { get; set; } // Base64 encoded
-        public string Address { get; set; }
+        public string name { get; set; }
+        public string gender { get; set; }
+        public DateTime dateOfBirth { get; set; }
+        public string email { get; set; }
+        public string phone { get; set; }
+        public string photo { get; set; } // Base64 encoded
+        public string address { get; set; }
     }
 }

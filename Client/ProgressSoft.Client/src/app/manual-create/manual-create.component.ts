@@ -50,7 +50,7 @@ export class ManualCreateComponent {
 
       formData.append('name', this.cardReaderForm.get('name')?.value);
       formData.append('gender', this.cardReaderForm.get('gender')?.value);
-      formData.append('dateOfBirth', this.cardReaderForm.get('dateOfBirth')?.value.toISOString());
+      formData.append('dateOfBirth', this.cardReaderForm.get('dateOfBirth')?.value);
       formData.append('email', this.cardReaderForm.get('email')?.value);
       formData.append('phone', this.cardReaderForm.get('phone')?.value);
       formData.append('address', this.cardReaderForm.get('address')?.value);
@@ -65,13 +65,10 @@ export class ManualCreateComponent {
           this.toasterService.success("Card Reader Created Successfuly");
           this.resetForm();
           this.routing();
-
         }
         else {
-          console.log(response.title);
+          this.toasterService.error(response.detail);
         }
-      }, (error) => {
-        console.error('Error occurred:', error);
       });
     }
   }

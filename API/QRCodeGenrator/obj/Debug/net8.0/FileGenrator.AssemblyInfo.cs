@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileGenrator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+130c4cef90c3249067579b1efba1d5c9f3920427")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+590c661ef5bfc34c12b8fe0ab61e048322ba1114")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileGenrator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileGenrator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

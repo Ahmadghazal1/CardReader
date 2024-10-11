@@ -52,18 +52,17 @@ export class ExportService {
 
   convertToXML(cardReader: ICardReader): string {
     return `
-    <cardReaders>
+    <CardReaders>
         <CardReader>
-            <Id>${cardReader.id}</Id>
-            <Name>${cardReader.name}</Name>
-            <Address>${cardReader.address}</Address>
-            <Phone>${cardReader.phone}</Phone>
-            <DateOfBirth>${cardReader.dateOfBirth}</DateOfBirth>
-            <Email>${cardReader.email}</Email>
-            <Photo>${cardReader.photo}</Photo>
-            <Gender>${cardReader.gender}</Gender>
+            <name>${cardReader.name}</name>
+            <address>${cardReader.address}</address>
+            <phone>${cardReader.phone}</phone>
+            <dateOfBirth>${cardReader.dateOfBirth}</dateOfBirth>
+            <email>${cardReader.email}</email>
+            <photo>${cardReader.photo}</photo>
+            <gender>${cardReader.gender}</gender>
         </CardReader>
-      </cardReaders>
-    `.trim(); 
+      </CardReaders>
+    `.trim();
   }
 }
