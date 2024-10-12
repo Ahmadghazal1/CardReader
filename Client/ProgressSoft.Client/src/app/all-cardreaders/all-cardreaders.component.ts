@@ -51,7 +51,7 @@ export class AllCardreadersComponent implements OnInit {
         this.exportService.exportToXML(cardReader);
         break;
       case 'csv':
-        this.exportService.exportToXML(cardReader);
+        this.exportService.exportToCSV(cardReader);
         break;
     }
   }

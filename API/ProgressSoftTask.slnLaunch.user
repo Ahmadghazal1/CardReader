@@ -4,11 +4,8 @@
     "Projects": [
       {
         "Name": "ProgressSoft.API\\ProgressSoft.API.csproj",
-        "Action": "Start"
-      },
-      {
-        "Name": "QRCodeGenrator\\FileGenrator.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": ""
       }
     ]
   }
